@@ -1,0 +1,40 @@
+// Java code for the above approach
+import java.io.*;
+
+class GFG {
+	public static void main(String[] args)
+	{
+		// Given integer N
+		int N = 12;
+
+		// Initialize s and t
+		int s = N / 2;
+		int t = s;
+
+		// Traverse from 0 till N
+		for (int i = 0; i < N; i++) {
+
+			if (i > s) {
+
+				for (int j = 0; j < s; j++)
+					System.out.print(" ");
+			}
+			else {
+
+				for (int j = 0; j < i; j++)
+					System.out.print(" ");
+
+				System.out.print("*");
+
+				for (int k = 0; k < 2 * t; k++)
+					System.out.print(" ");
+
+				// Decrement t
+				t--;
+			}
+
+			System.out.println(" *");
+		}
+	}
+}
+
